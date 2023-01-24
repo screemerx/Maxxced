@@ -1,8 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Bebas Neue", cursive;
-  box-sizing: inherit;
+  font-family: "Bebas Neue";
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("./Bebas_Neue/BebasNeue-Regular.ttf") format("truetype");
 }
 
 html {
@@ -107,8 +112,8 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-
+  height: auto;
+  padding-top: 9rem;
   top: 0;
   right: 0;
   bottom: 0;
@@ -142,7 +147,7 @@ html {
   border-radius: 3px;
   padding: 1rem 2.5rem;
   font-size: 1.5rem;
-  margin-top: 2rem;
+  margin-top: auto;
   margin-bottom: 5rem;
   background-color: #ffbf00c5;
   color: white;
@@ -159,6 +164,7 @@ html {
 .nosotros {
   background-color: #1c1c1c;
   height: 70vh;
+  padding-bottom: 3rem;
 }
 
 .nosotros__info p {
@@ -240,7 +246,7 @@ html {
 
 .servicio {
   background-color: #1c1c1c /*#ffbf00*/;
-  height: 100vh;
+  height: 110vh;
 }
 
 .info {
@@ -259,8 +265,8 @@ html {
 
 .servicios__card {
   position: relative;
-  max-width: 460px;
-  height: 360px;
+  max-width: 490px;
+  height: 400px;
   background-color: #fff;
   margin: 30px 10px;
   padding: 30px 15px;
@@ -272,7 +278,7 @@ html {
 }
 
 .servicios__card:hover {
-  height: 600px;
+  height: 650px;
 }
 
 .servicios__card--img {
@@ -333,6 +339,11 @@ html {
 /* Medias */
 
 @media (max-width: 1440px) {
+  .caja__texto {
+    height: auto;
+    padding-top: 3rem;
+  }
+
   .info {
     background-color: #1c1c1c /*#ffbf00*/;
     height: auto;
@@ -345,8 +356,9 @@ html {
   }
 
   .nosotros {
-    height: 85vh;
+    height: auto;
     padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .nosotros__contenedor {
@@ -378,6 +390,12 @@ html {
 }
 
 @media (max-width: 1024px) {
+  .caja__texto {
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+  }
+
   .info {
     background-color: #1c1c1c /*#ffbf00*/;
     height: auto;
@@ -386,8 +404,9 @@ html {
   }
 
   .nosotros {
-    height: 85vh;
+    height: auto;
     padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .nosotros__contenedor {
@@ -424,9 +443,20 @@ html {
 }
 
 @media (max-width: 768px) {
+  .caja__texto {
+    height: auto;
+    padding-top: 6rem;
+  }
+
+  .hamburger-box {
+    width: 40px;
+    height: 22px;
+  }
+
   .nosotros {
-    height: 85vh;
+    height: auto;
     padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .nosotros__contenedor {
@@ -462,7 +492,7 @@ html {
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.822);
-    transition: transform 3s ease;
+    transition: transform 1s ease;
     transform: translate(0, 100%);
   }
 
@@ -475,8 +505,8 @@ html {
     z-index: 999;
     bottom: 1vh;
     right: 1vh;
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     background-color: wheat;
   }
@@ -512,6 +542,17 @@ html {
 }
 
 @media (max-width: 425px) {
+  .caja__texto {
+    height: auto;
+    padding-top: 1rem;
+  }
+
+  .caja__texto--button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    margin: auto;
+  }
+
   .caja__texto h2 {
     padding: 0rem 1rem;
     font-size: 2.5rem;
@@ -522,8 +563,9 @@ html {
     font-size: 1.5rem;
   }
   .nosotros {
-    height: 85vh;
+    height: auto;
     padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .nosotros__contenedor {
@@ -542,6 +584,82 @@ html {
 
   .nosotros__info p {
     width: 70%;
+    font-size: 1.5rem;
+  }
+
+  .nosotros__img img {
+    height: 300px;
+    width: 100%;
+    clip-path: none;
+    object-fit: cover;
+  }
+
+  .servicios__card {
+    max-width: 269px;
+    height: 213px;
+  }
+  .servicios__card--img img {
+    height: 250px;
+    width: 270px;
+  }
+
+  .servicios__card--img {
+    width: 240px;
+  }
+  .servicios__card:hover {
+    height: 600px;
+  }
+  .servicios__card:hover .servicios__card--text {
+    margin-top: 0px;
+  }
+  .servicios__titulo {
+    font-size: 2rem;
+  }
+  .clientes h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .caja__texto {
+    height: auto;
+    padding-top: 2rem;
+  }
+
+  .servicios__button {
+    border-radius: 3px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .servicios__card--text {
+    padding: 0px 0px;
+  }
+
+  .nosotros {
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .nosotros__contenedor {
+    flex-direction: column;
+  }
+
+  .nosotros__info {
+    padding-left: 0rem;
+    font-size: 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .nosotros__info h2 {
+    font-size: 3rem;
+  }
+
+  .nosotros__info p {
+    width: 70%;
+    font-size: 1.5rem;
   }
 
   .nosotros__img img {
@@ -577,59 +695,41 @@ html {
   }
 }
 
-@media (max-width: 375px) {
-  .nosotros {
-    height: 85vh;
+@media (max-width: 320px) {
+  .header {
+    height: 140vh;
+  }
+
+  .caja__gif::after {
+    height: 140vh;
+  }
+
+  .caja__texto {
+    height: auto;
     padding-top: 2rem;
   }
 
-  .nosotros__contenedor {
-    flex-direction: column;
-  }
-
-  .nosotros__info {
-    padding-left: 0rem;
-    font-size: 1.5rem;
-    padding-bottom: 3rem;
-  }
-
-  .nosotros__info h2 {
-    font-size: 3rem;
+  .nosotros {
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .nosotros__info p {
-    width: 70%;
+    width: 92%;
+    font-size: 1.5rem;
   }
 
   .nosotros__img img {
-    height: 300px;
-    width: 100%;
-    clip-path: none;
-    object-fit: cover;
-  }
-
-  .servicios__card {
-    max-width: 269px;
-    height: 213px;
-  }
-  .servicios__card--img img {
-    height: 250px;
-    width: 270px;
-  }
-
-  .servicios__card--img {
-    width: auto;
-  }
-  .servicios__card:hover {
-    height: 600px;
-  }
-  .servicios__card:hover .servicios__card--text {
-    margin-top: 0px;
-  }
-  .servicios__titulo {
-    font-size: 2rem;
+    height: 286px;
   }
   .clientes h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .servicios__card--img img {
+    height: 202px;
+    width: 316px;
+    object-fit: cover;
   }
 }
